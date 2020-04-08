@@ -60,8 +60,7 @@ async function init() {
 
   promise = removePackages(params);
   ora().succeed('👤 Preenchendo ficha de personagem...');
-  // const rpgRandomAttribute = getRndInteger(-3, 20);
-  rpgRandomAttribute = -1;
+  const rpgRandomAttribute = getRndInteger(-3, 20);
   ora.promise(
     promise,
     `🗡  Adicionando ${rpgRandomAttribute} de \
@@ -71,8 +70,7 @@ ao ${characters[getRndInteger(0, characters.length)]}... ${rpgRandomAttribute <=
   await promise;
 
   promise = selfDestruction(params);
-  // const rpgDiceRollout = getRndInteger(1, 20);
-  rpgDiceRollout = 18;
+  const rpgDiceRollout = getRndInteger(1, 20);
   ora.promise(promise, `🎲 Rolando o D20... Saiu ${rpgDiceRollout}${rpgDiceRollout >= 18 ? '! Boa!' : '.'}`);
   await promise;
 
