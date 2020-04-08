@@ -23,8 +23,8 @@
     "seed:make": "yarn knex seed:make -x ts",
     "postseed:make": "yarn eslint \"./src/modules/database/migrations/**/*.ts\" --fix",
     "docker:release": "yarn docker:build && yarn docker:push",
-    "docker:build": "docker build -t project/project-base-api -f docker/prod/Dockerfile .",
-    "docker:push": "docker push project/project-base-api"
+    "docker:build": "docker build -t YOUR_DOCKER_USERNAME/project-base-api -f docker/prod/Dockerfile .",
+    "docker:push": "docker push YOUR_DOCKER_USERNAME/project-base-api"
   },
   "husky": {
     "hooks": {

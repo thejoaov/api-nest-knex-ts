@@ -10,7 +10,7 @@ DESENVOLVIMENTO
 
 ### Usuário
 
-Email: admin@project.com.br 
+Email: admin@admin.com.br 
 Senha: senha@123
 
 ### Iniciando 

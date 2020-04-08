@@ -1,7 +1,5 @@
-project Api Base
+💥 ULTIMATE MEGA BLASTER PROJECT API GENERATOR 💥
 ==================
-
-[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/f109c9a8c09dd5e648dd)
 
 Utilize o VSCode, já está configurado com sugestão de extensões e debug.
 
@@ -23,7 +21,7 @@ Utilize o VSCode, já está configurado com sugestão de extensões e debug.
 ```bash
 # install docker https://docs.docker.com/install
 
-git clone git@bitbucket.org:projectbase/project-base-api.git
+git clone git@github.com:thejoaov/api-nest-knex-ts.git
 yarn install # ou npm install
 
 node ./init.js

@@ -22,7 +22,7 @@ Ver arquivos ./env, ./env.example e ./src/settings.ts
 | AWS_S3_URL          | false       |              | informações da aws para uplaod s3                  |
 | DATABASE_HOST       | true        | localhost    | informações de conexão do banco                    |
 | DATABASE_PORT       | true        | 3002         | informações de conexão do banco                    |
-| DATABASE_DB         | true        | project    | informações de conexão do banco                    |
+| DATABASE_DB         | true        | project      | informações de conexão do banco                    |
 | DATABASE_USER       | true        | docker       | informações de conexão do banco                    |
 | DATABASE_PASSWORD   | true        | 123mudar     | informações de conexão do banco                    |
 
@@ -39,8 +39,8 @@ Ver arquivos ./env, ./env.example e ./src/settings.ts
 | migration:make  | cria uma nova migration do banco de dados      | desenvolvedor                         |
 | seed:make       | cria um novo arquivo de seed do banco de dados | desenvolvedor                         |
 | docker:release  | build e da push na nova imagem do docker       | devensolvedor                         |
-| docker:build    | build a nova imagem do docker                  | script docker:release / devensolvedor |
-| docker:push     | dá push na nova imagem do docker               | script docker:release / devensolvedor |
+| docker:build    | build a nova imagem do docker                  | script docker:release / desenvolvedor |
+| docker:push     | dá push na nova imagem do docker               | script docker:release / desenvolvedor |
 
 ### Sistema de pastas
 
@@ -100,13 +100,13 @@ Ver arquivos ./env, ./env.example e ./src/settings.ts
 
 ### Boas práticas e pontos a serem observados
 
-* Toda **model** tem sua interface pois o route pode receber uma model completa mas ela não terá o comportamento e funções da mesma.
+* Toda **model** tem sua interface, pois o router pode receber uma model completa mas ela não terá o comportamento e funções da mesma.
 * Os repositórios retornam a model e não a interface.
 * Coloque os **ENVIRONMENTS** no settings.ts, coloque seu valor default se tiver.
 * As models de banco podem conter alguma **lógica simples de comportamento**. (ex: user.checkPassword).
 * Sempre trabalhe com **async await (promisses)**, evite callback.
 * Mantenhas os **arquivos pequenos e focados** em uma funcionaldade.
-* Nomei as funções corretamente, **evite comentários desnecessários**.
+* Nomeie as funções corretamente, **evite comentários desnecessários**.
 * Evite ao máximo o **any** do Typescript pois isso tira a verificação dele.
 * Use **interfaces** para definir objectos e parametros complexos. 
 * Não coloque números ou strings direto no código, use **Enums**.

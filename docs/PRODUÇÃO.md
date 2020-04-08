@@ -5,14 +5,13 @@ PRODUÇÃO
 
 ### Gerando a imagem
 
-Para criar uma imagem de produção basta rodar:
+Para criar uma imagem de produção, altere o valor *YOUR_DOCKER_USERNAME* nos scripts `docker:build`, e `docker:push` arquivo `package.json`, na raiz do projeto, depois basta rodar:
 
 ```bash
 yarn docker:release # ou npm run docker:release
 ```
 
-Ele gerará a imagem e dará push no repositório do docker.hub. É possível ativar
-o Bitbucket Pipelines para fazer todos esse processo automático, deixei um arquivo de exemplo.
+Ele gerará a imagem e dará push no repositório do docker.hub.
 
 ### Levantando
 
