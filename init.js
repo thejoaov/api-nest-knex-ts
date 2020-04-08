@@ -51,7 +51,7 @@ async function init() {
   console.log('\n');
 
   let promise = cleanup(params);
-  ora.promise(promise, '🌎 Criando a aventura...');
+  ora.promise(promise, '🌎  Criando a aventura...');
   await promise;
 
   const getRndInteger = (min, max) => {
@@ -59,7 +59,7 @@ async function init() {
   };
 
   promise = removePackages(params);
-  ora().succeed('👤 Preenchendo ficha de personagem...');
+  ora().succeed('👤  Preenchendo ficha de personagem...');
   const rpgRandomAttribute = getRndInteger(-3, 20);
   ora.promise(
     promise,
@@ -71,14 +71,14 @@ ao ${characters[getRndInteger(0, characters.length)]}... ${rpgRandomAttribute <=
 
   promise = selfDestruction(params);
   const rpgDiceRollout = getRndInteger(1, 20);
-  ora.promise(promise, `🎲 Rolando o D20... Saiu ${rpgDiceRollout}${rpgDiceRollout >= 18 ? '! Boa!' : '.'}`);
+  ora.promise(promise, `🎲  Rolando o D20... Saiu ${rpgDiceRollout}${rpgDiceRollout >= 18 ? '! Boa!' : '.'}`);
   await promise;
 
   promise = resetGit(params);
   ora.promise(promise, '⚔️  Raidando o final boss...');
   await promise;
 
-  ora().succeed('✨ Level up! Projeto criado com sucesso!');
+  ora().succeed('✨  Level up! Projeto criado com sucesso!');
 }
 
 async function awaitWarning() {
