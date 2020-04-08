@@ -86,7 +86,7 @@ ao ${characters[getRndInteger(0, characters.length)]}... ${rpgRandomAttribute <=
 async function awaitWarning() {
   return new Promise(resolve => {
     setTimeout(() => {
-      console.log('\n 💥 ULTIMATE MEGA BLASTER PROJECT API GENERATOR 💥\n');
+      console.log('\n 💥 NEST API iGENERATOR MAX PRO 💥\n');
       console.log('🔹 NestJS\n🔹 TypeScript\n🔹 Knex\n🔹 Docker && docker-compose\n🔹 Husky\n');
       resolve();
     });
