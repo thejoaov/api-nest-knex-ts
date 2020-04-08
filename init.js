@@ -66,7 +66,7 @@ async function init() {
     promise,
     `🗡  Adicionando ${rpgRandomAttribute} de \
 ${attributes[getRndInteger(0, attributes.length)]} \
-ao ${characters[getRndInteger(0, characters.length)]}... ${rpgRandomAttribute <= 0 ? 'Fazer o quê né 🤷...ee' : ''}`
+ao ${characters[getRndInteger(0, characters.length)]}... ${rpgRandomAttribute <= 0 ? 'Fazer o quê né 🤷...' : ''}`
   );
   await promise;
 
