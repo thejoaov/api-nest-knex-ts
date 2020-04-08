@@ -1,0 +1,71 @@
+doctype strict
+html(xmlns='http://www.w3.org/1999/xhtml')
+  head
+    meta(http-equiv='Content-Type', content='text/html; charset=utf-8')
+    meta(name='viewport', content='width=device-width')
+
+    include _theme
+    style(type="text/css").
+      html, body, .wrapper-content, .wrapper-content > table > tbody > tr {
+        background: #37474f;
+        color: #202020;
+      }
+
+      .wrapper-content {
+        padding: 20px 0;
+      }
+
+      .mui-panel {
+        border: none !important;
+        border-radius: 3px !important;
+        box-shadow: 0 4px 7px #2f2e2e;
+      }
+
+      .mui-panel > :first-child {
+        margin-top: 0;
+      }
+
+      .mui-btn--raised {
+        box-shadow: 0 2px 5px 0 rgba(0,0,0,.26);
+      }
+
+      .footer {
+        padding-top: 20px;
+        color: #ededed;
+      }
+
+      .footer a{
+        color: inherit;
+        text-decoration: underline;
+      }
+
+      .call-action {
+        padding: 20px 0 10px 0;
+      }
+
+      .error {
+        color: red;
+        white-space: pre-wrap;
+      }
+
+  body
+    .wrapper-content
+      table.mui-body(cellpadding='0', cellspacing='0', border='0')
+        tbody
+          tr
+            td
+              center
+                //[if mso]><table><tr><td class="mui-container-fixed"><![endif]
+                .mui-container
+                  table(cellpadding='0', cellspacing='0', border='0', width='100%')
+                    tr
+                      td.mui-panel
+                        block content
+                .footer
+                  p
+                    a(href=urlSite, target="_blank") #{urlSite}
+                    |  © #{currentYear}
+                    br
+                    | Esse email foi gerado automaticamente
+
+              //[if mso]></td></tr></table><![endif]

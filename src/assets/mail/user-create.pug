@@ -1,0 +1,8 @@
+extends _base
+block content
+  h2 Bem vindo #[strong #{firstName}]!
+  p.mui--text-subhead
+    | Você foi adicionado e sua senha de acesso é #[strong #{password}]
+
+  center.call-action
+    a.mui-btn.mui-btn--raised.mui-btn--primary(href=urlSite, target="_blank") Acessar

@@ -1,0 +1,27 @@
+version: '2'
+services:
+
+  web:
+    container_name: project-api
+    build: docker/dev
+    ports:
+      - "3001:3000"
+      - "3229:9229"
+    env_file:
+      - .env
+    volumes:
+      - .:/server
+    links:
+      - database
+
+  database:
+    container_name: project-database
+    image: postgres:11.5-alpine
+    environment:
+      - POSTGRES_DB=project
+      - POSTGRES_USER=docker
+      - POSTGRES_PASSWORD=123mudar
+    volumes:
+      - ./.data/postgresql:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
