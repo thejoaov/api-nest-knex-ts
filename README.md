@@ -1,4 +1,4 @@
-💥 ULTIMATE MEGA BLASTER PROJECT API GENERATOR 💥
+💥NEST API iGENERATOR MAX PRO💥
 ==================
 
 Utilize o VSCode, já está configurado com sugestão de extensões e debug.
@@ -22,6 +22,8 @@ Utilize o VSCode, já está configurado com sugestão de extensões e debug.
 # install docker https://docs.docker.com/install
 
 git clone git@github.com:thejoaov/api-nest-knex-ts.git
+# ou crie um repositório utilizando o botão de template 😁 
+
 yarn install # ou npm install
 
 node ./init.js
