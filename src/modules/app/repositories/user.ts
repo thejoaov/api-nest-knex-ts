@@ -14,10 +14,7 @@ export class UserRepository {
   }
 
   public async isEmailAvailable(email: string, skipUserId?: number, transaction?: Transaction): Promise<boolean> {
-    let query = User.query(transaction)
-      .count('id as count')
-      .where({ email })
-      .first();
+    let query = User.query(transaction).count('id as count').where({ email }).first();
 
     if (skipUserId) {
       query = query.where('id', '!=', skipUserId);

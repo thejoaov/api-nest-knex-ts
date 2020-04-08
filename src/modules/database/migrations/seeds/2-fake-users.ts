@@ -6,10 +6,7 @@ import { IS_DEV } from 'settings';
 export async function seed(knex: Knex): Promise<void> {
   if (!IS_DEV) return;
 
-  const users = await knex
-    .count()
-    .from('User')
-    .first();
+  const users = await knex.count().from('User').first();
 
   if (Number(users.count) !== 1) return;
 

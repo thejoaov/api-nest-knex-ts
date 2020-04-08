@@ -33,18 +33,13 @@ export class UserRepository {
   }
 
   public async count(transaction?: Transaction): Promise<Number> {
-    const result: any = await User.query(transaction)
-      .count('id as count')
-      .first();
+    const result: any = await User.query(transaction).count('id as count').first();
 
     return Number(result.count);
   }
 
   public async isEmailAvailable(email: string, skipUserId?: number, transaction?: Transaction): Promise<boolean> {
-    let query = User.query(transaction)
-      .count('id as count')
-      .where({ email })
-      .first();
+    let query = User.query(transaction).count('id as count').where({ email }).first();
 
     if (skipUserId) {
       query = query.where('id', '!=', skipUserId);
@@ -55,15 +50,11 @@ export class UserRepository {
   }
 
   public async findById(id: number, transaction?: Transaction): Promise<User> {
-    return User.query(transaction)
-      .where({ id })
-      .first();
+    return User.query(transaction).where({ id }).first();
   }
 
   public async findByEmail(email: string, transaction?: Transaction): Promise<User> {
-    return User.query(transaction)
-      .where({ email })
-      .first();
+    return User.query(transaction).where({ email }).first();
   }
 
   public async insert(model: IUser, transaction?: Transaction): Promise<User> {
@@ -75,8 +66,6 @@ export class UserRepository {
   }
 
   public async remove(id: number, transaction?: Transaction): Promise<void> {
-    await User.query(transaction)
-      .del()
-      .where({ id });
+    await User.query(transaction).del().where({ id });
   }
 }

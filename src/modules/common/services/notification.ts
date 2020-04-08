@@ -8,9 +8,7 @@ export class NotificationService {
   constructor(private http: HttpService) {}
 
   public async sendToUser(userId: number, title: string, body: string, payload: any): Promise<any> {
-    const devices = await Device.query()
-      .where({ userId })
-      .whereNotNull('notificationToken');
+    const devices = await Device.query().where({ userId }).whereNotNull('notificationToken');
 
     if (!devices.length) return;
 

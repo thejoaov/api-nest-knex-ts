@@ -12,11 +12,7 @@ export async function seed(knex: Knex): Promise<void> {
     updatedDate: new Date()
   };
 
-  const users = await knex
-    .count()
-    .from('User')
-    .where({ email: adminUser.email })
-    .first();
+  const users = await knex.count().from('User').where({ email: adminUser.email }).first();
 
   if (Number(users.count) > 0) return;
 
