@@ -33,4 +33,9 @@ node ./init.js
 # e iniciará o node com a api
 ```
 
-### Para mais informações veja a pasta ./docs
+### Para mais informações, veja:
+1. [Arquitetura](./docs/ARQUITETURA.md)
+2. [Desenvolvimento](./docs/DESENVOLVIMENTO.md)
+3. [Produção](./docs/PRODUÇÃO.md)
+4. [Testes](./docs/TESTES.md)
+
